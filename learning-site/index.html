@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An interactive beginner-friendly Go learning path with lessons, examples, quizzes, and practical exercises." />
+    <title>Go Foundations · Interactive Learning Path</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#course">Skip to course</a>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Go Foundations home">
+        <span class="brand-mark" aria-hidden="true">G<span>o</span></span>
+        <span><strong>Go</strong> Foundations</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#course">Lessons</a>
+        <a href="#practice">Practice</a>
+        <a href="#reference">Quick reference</a>
+      </nav>
+      <div class="header-actions">
+        <div class="mini-progress" aria-label="Course progress"><i id="headerProgress"></i><span id="headerProgressText">0%</span></div>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch theme">◐</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Beginner path · Learn by building</div>
+          <h1 id="hero-title">Learn Go.<br/><em>Think clearly.</em><br/>Build useful things.</h1>
+          <p>A practical introduction to Go syntax, functions, collections, structs, interfaces, and error handling—designed for engineers who want a strong foundation before moving into APIs, cloud tools, and Kubernetes development.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#course">Start learning <span aria-hidden="true">↓</span></a>
+            <button class="secondary-button" id="resumeButton" type="button">Resume last lesson</button>
+          </div>
+          <div class="course-facts" aria-label="Course facts">
+            <span><b>8</b> focused lessons</span>
+            <span><b>16</b> code examples</span>
+            <span><b>8</b> knowledge checks</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Current course progress">
+          <div class="orbital" aria-hidden="true"><div class="go-orb">Go</div><i></i><i></i><i></i></div>
+          <div class="progress-summary">
+            <div><span>Your progress</span><strong id="progressCount">0 / 8</strong></div>
+            <div class="progress-track"><i id="progressBar"></i></div>
+            <p id="progressMessage">Start with the Go mindset and your first program.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="course-section" id="course" aria-labelledby="course-title">
+        <div class="section-heading">
+          <div><div class="eyebrow">Guided curriculum</div><h2 id="course-title">Your learning workspace</h2></div>
+          <p>Select a lesson, study the concept, edit the example, and run it in the browser learning sandbox.</p>
+        </div>
+
+        <div class="course-shell">
+          <aside class="lesson-nav" aria-label="Course lessons">
+            <div class="nav-head"><span>FOUNDATIONS</span><b id="moduleProgress">0 / 8</b></div>
+            <div id="lessonList" class="lesson-list"></div>
+          </aside>
+
+          <article class="lesson-panel" aria-live="polite">
+            <div class="lesson-meta"><span id="lessonNumber">LESSON 01</span><span id="lessonDuration">15 MIN</span></div>
+            <h3 id="lessonTitle">The Go mindset</h3>
+            <p class="lesson-lead" id="lessonLead"></p>
+            <div class="lesson-goals" id="lessonGoals"></div>
+            <div class="concept-card">
+              <span class="concept-label">KEY IDEA</span>
+              <p id="lessonConcept"></p>
+            </div>
+            <div class="mentor-note"><span aria-hidden="true">↳</span><p><b>Engineer’s note</b><span id="mentorNote"></span></p></div>
+            <button class="complete-button" id="completeLesson" type="button"><span class="check-icon">✓</span><span>Mark lesson complete</span></button>
+          </article>
+
+          <aside class="code-panel" aria-label="Go example editor">
+            <div class="code-head">
+              <div><span class="window-dot red"></span><span class="window-dot amber"></span><span class="window-dot green"></span><b>main.go</b></div>
+              <button id="resetCode" type="button">Reset</button>
+            </div>
+            <div class="editor-wrap">
+              <div class="line-numbers" id="lineNumbers" aria-hidden="true"></div>
+              <textarea id="codeEditor" aria-label="Editable Go code" spellcheck="false"></textarea>
+            </div>
+            <div class="code-actions">
+              <span>Learning sandbox</span>
+              <button class="run-button" id="runCode" type="button"><span aria-hidden="true">▶</span> Run example</button>
+            </div>
+            <div class="terminal" aria-live="polite">
+              <div><span>OUTPUT</span><button id="clearOutput" type="button">Clear</button></div>
+              <pre id="codeOutput">Ready. Run the lesson example.</pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="practice-section" id="practice" aria-labelledby="practice-title">
+        <div class="section-heading">
+          <div><div class="eyebrow">Practice arena</div><h2 id="practice-title">Check your understanding</h2></div>
+          <p>Small exercises turn syntax into recall. Choose an answer, check it, then try the current lesson challenge.</p>
+        </div>
+
+        <div class="practice-grid">
+          <article class="quiz-card">
+            <div class="card-topline"><span>KNOWLEDGE CHECK</span><b id="quizLesson">Lesson 01</b></div>
+            <h3 id="quizQuestion"></h3>
+            <div class="answer-list" id="answerList"></div>
+            <div class="quiz-actions"><button class="primary-button compact" id="checkAnswer" type="button">Check answer</button><span id="quizResult" aria-live="polite"></span></div>
+          </article>
+
+          <article class="challenge-card">
+            <div class="card-topline"><span>MINI CHALLENGE</span><b>5–10 MIN</b></div>
+            <h3 id="challengeTitle"></h3>
+            <p id="challengeText"></p>
+            <div class="challenge-hints"><button id="showHint" type="button">Show hint <span>+</span></button><p id="hintText" hidden></p></div>
+            <button class="secondary-button wide" id="loadChallenge" type="button">Load starter code in editor</button>
+          </article>
+
+          <article class="reference-card" id="reference">
+            <div class="card-topline"><span>QUICK REFERENCE</span><b>GO ESSENTIALS</b></div>
+            <div class="reference-tabs" role="tablist" aria-label="Go quick reference topics">
+              <button class="ref-tab active" role="tab" aria-selected="true" data-ref="syntax">Syntax</button>
+              <button class="ref-tab" role="tab" aria-selected="false" data-ref="types">Types</button>
+              <button class="ref-tab" role="tab" aria-selected="false" data-ref="commands">Commands</button>
+            </div>
+            <div id="referenceContent" class="reference-content"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>Go Foundations</span><span>Examples target modern Go · Progress is stored only in your browser</span></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
