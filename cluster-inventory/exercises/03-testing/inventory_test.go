@@ -1,0 +1,3 @@
+package testingtrack
+import("errors";"reflect";"testing")
+func TestNormalizeTable(t *testing.T){tests:=[]struct{name string;in,want []Cluster;wantErr error}{{"empty is valid",nil,[]Cluster{},nil},{"sorts",[]Cluster{{"b",2},{"a",1}},[]Cluster{{"a",1},{"b",2}},nil},{"invalid nodes",[]Cluster{{"a",0}},nil,ErrInvalid},{"duplicate",[]Cluster{{"a",1},{"a",2}},nil,ErrInvalid}};for _,tc:=range tests{t.Run(tc.name,func(t *testing.T){got,err:=Normalize(tc.in);if !errors.Is(err,tc.wantErr){t.Fatalf("error=%v want=%v",err,tc.wantErr)};if len(tc.want)==0&&len(got)==0{return};if !reflect.DeepEqual(got,tc.want){t.Fatalf("got=%v want=%v",got,tc.want)}})}}

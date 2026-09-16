@@ -14,6 +14,11 @@ It includes:
 - Progress tracking stored in the browser
 - Quick references for syntax, types, and Go commands
 - Responsive light and dark themes
+- A five-exercise senior interview track using a runnable cluster-inventory Go module
+
+## Cluster inventory interview project
+
+The [`cluster-inventory/`](./cluster-inventory) module adds progressive platform-engineering exercises covering validation, interfaces, table-driven testing, bounded concurrency, HTTP APIs, timeouts, and graceful shutdown.
 
 ### Run locally
 

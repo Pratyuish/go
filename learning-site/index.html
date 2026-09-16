@@ -16,6 +16,7 @@
       </a>
       <nav aria-label="Page navigation">
         <a href="#course">Lessons</a>
+        <a href="#interview-track">Senior track</a>
         <a href="#practice">Practice</a>
         <a href="#reference">Quick reference</a>
       </nav>
@@ -97,6 +98,41 @@
         </div>
       </section>
 
+      <section class="interview-section" id="interview-track" aria-labelledby="interview-title">
+        <div class="track-heading">
+          <div>
+            <div class="eyebrow"><span></span> Senior interview track · Runnable Go</div>
+            <h2 id="interview-title">Build a production-minded cluster inventory</h2>
+            <p>Five progressive exercises move from correct code to senior-level design. Work in the real Go module, run the tests, then compare your decisions with the reference solution.</p>
+          </div>
+          <div class="track-summary" aria-label="Track summary">
+            <strong>5 exercises</strong><span>75–110 minutes</span><span>CLI → concurrency → production</span>
+          </div>
+        </div>
+        <div class="track-workspace">
+          <aside class="exercise-nav" aria-label="Cluster inventory exercises">
+            <div class="nav-head"><span>CLUSTER INVENTORY</span><b id="exerciseProgress">0 / 5</b></div>
+            <div id="exerciseList" class="exercise-list"></div>
+          </aside>
+          <article class="exercise-detail" aria-live="polite">
+            <div class="exercise-meta"><span id="exerciseLevel">EXERCISE 01</span><span id="exerciseDuration">15 MIN</span></div>
+            <h3 id="exerciseTitle"></h3><p class="exercise-lead" id="exerciseLead"></p>
+            <div class="skill-chips" id="exerciseSkills"></div>
+            <div class="exercise-columns">
+              <div><h4>Engineering task</h4><ol id="exerciseRequirements"></ol></div>
+              <div class="definition-card"><h4>Definition of done</h4><ul id="exerciseDone"></ul></div>
+            </div>
+            <div class="command-card"><div><span>RUN LOCALLY</span><button id="copyExerciseCommand" type="button">Copy</button></div><code id="exerciseCommand"></code></div>
+            <div class="solution-panel">
+              <button id="toggleSolution" class="solution-toggle" type="button" aria-expanded="false">Reveal solution approach <span>+</span></button>
+              <div id="solutionContent" hidden><p id="solutionSummary"></p><pre><code id="solutionCode"></code></pre></div>
+            </div>
+            <div class="followups"><div class="card-topline"><span>INTERVIEWER FOLLOW-UPS</span><b>SAY IT OUT LOUD</b></div><ul id="exerciseFollowups"></ul></div>
+            <button class="complete-button" id="completeExercise" type="button"><span class="check-icon">✓</span><span>Mark exercise complete</span></button>
+          </article>
+        </div>
+      </section>
+
       <section class="practice-section" id="practice" aria-labelledby="practice-title">
         <div class="section-heading">
           <div><div class="eyebrow">Practice arena</div><h2 id="practice-title">Check your understanding</h2></div>
@@ -134,5 +170,6 @@
 
     <footer><span>Go Foundations</span><span>Examples target modern Go · Progress is stored only in your browser</span></footer>
     <script src="app.js"></script>
+    <script src="interview-track.js"></script>
   </body>
 </html>

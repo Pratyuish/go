@@ -1,6 +1,18 @@
 # Go Foundations Learning Website
 
-An interactive beginner-friendly Go course with eight guided lessons, editable examples, simulated learning-sandbox output, quizzes, mini challenges, progress tracking, and a quick-reference panel.
+An interactive Go course with eight foundation lessons plus a senior interview track built around a runnable cluster-inventory project.
+
+## Senior interview track
+
+The `cluster-inventory/` module contains five progressive platform-engineering exercises:
+
+1. Validation, wrapped errors, and deterministic output
+2. Consumer-owned interfaces and testable boundaries
+3. Table-driven tests and behavioral assertions
+4. Bounded concurrency, cancellation, and race safety
+5. HTTP boundaries, timeouts, graceful shutdown, and observability decisions
+
+Each exercise includes runnable reference code, tests, solution guidance on the website, and senior-level interviewer follow-up questions.
 
 ## Run locally
 
