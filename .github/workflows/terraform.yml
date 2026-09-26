@@ -20,7 +20,7 @@ jobs:
     # Tells GitHub to execute all steps inside your specific subfolder
     defaults:
       run:
-        working-directory: ./infra/infra
+        working-directory: ./
 
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
